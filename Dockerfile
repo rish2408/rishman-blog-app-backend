@@ -1,5 +1,5 @@
 # Build stage
-FROM maven:3.8.6-jdk-21 as builder
+FROM maven:3.9.9-temurin-21 as builder
 COPY . /app
 WORKDIR /app
 RUN mvn clean package
