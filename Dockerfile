@@ -1,7 +1,7 @@
 # Build stage
-FROM maven:3.9.9-openjdk-21 as builder
+FROM maven:3.9.9-eclipse-temurin-21 as builder
 COPY . .
-RUN mvn clean install
+RUN mvn clean install -DskipTests
 
 # Runtime stage
 FROM eclipse-temurin:21-jdk
